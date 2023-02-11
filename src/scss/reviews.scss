@@ -1,0 +1,154 @@
+.reviews {
+	@include Lato;
+	@include container;
+
+	@media (max-width:992px) {
+		margin-bottom: 49px;
+
+	}
+}
+
+.reviews__title {
+	@include SubTitle;
+	margin-bottom: 49px;
+
+	@media (max-width:992px) {
+		margin-bottom: 18px;
+	}
+
+	@media (max-width:560px) {
+		margin-bottom: 8px;
+	}
+}
+
+.reviews__content {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-auto-rows: auto;
+	gap: 45px 60px;
+
+	@media (max-width:992px) {
+		grid-template-columns: 100%;
+		grid-template-rows: auto 1.5fr 1fr;
+		gap: 45px;
+	}
+
+	@media (max-width:560px) {
+		grid-template-rows: auto 2fr 1fr;
+		gap: 20px;
+	}
+
+	.reviews__text {
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 29px;
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+
+		@media (max-width:992px) {
+			font-size: 18px;
+			line-height: 22px;
+			width: 90%;
+		}
+
+		@media (max-width:560px) {
+			font-size: 14px;
+			line-height: 17px;
+			width: 70%;
+		}
+
+	}
+
+
+
+	.reviews__photo {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-auto-rows: auto;
+		gap: 20px;
+		grid-column: 1 / 2;
+		grid-row: 2 / 3;
+
+
+		@media (max-width:992px) {
+			grid-template-columns: repeat(3, 1fr);
+			grid-column: 1 / 2;
+			grid-row: 3 / 4;
+		}
+
+		@media (max-width:600px) {
+			grid-template-columns: repeat(2, auto);
+			grid-column: 1 / 2;
+			grid-row: 3 / 4;
+			gap: 8px 20px;
+		}
+
+		.reviews__el {
+			position: relative;
+			@include boxShadow;
+
+
+			&:hover {
+				box-shadow: 0px 14px 48px 0px rgba(230, 235, 245);
+
+				.reviews__link::after {
+					background: url(../img/search.svg) center center no-repeat, linear-gradient(0deg, rgba(123, 200, 217, 0.87), rgba(123, 200, 217, 0.87));
+
+				}
+			}
+
+			.reviews__link::after {
+				content: '';
+				border-radius: 15px;
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				height: 100%;
+				transition: background .5s ease;
+
+			}
+		}
+
+
+
+
+		.reviews__name {
+			font-weight: 500;
+			font-size: 36px;
+			line-height: 43px;
+			grid-column: 1 / 3;
+			grid-row: 1 / 2;
+
+			@media (max-width:992px) {
+				grid-column: 1 / 4;
+				grid-row: 1 / 2;
+				font-size: 24px;
+				line-height: 29px;
+			}
+
+			@media (max-width:600px) {
+				grid-column: 1 / 3;
+				grid-row: 1 / 2;
+			}
+		}
+	}
+
+	.reviews__ya {
+		max-width: 760px;
+		grid-column: 2 / 3;
+		grid-row: 1 / 3;
+
+		@media (max-width:992px) {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+			margin: 0 auto;
+		}
+
+		.badge {
+			@media (max-width:992px) {
+				margin: 0 auto;
+			}
+		}
+	}
+
+}

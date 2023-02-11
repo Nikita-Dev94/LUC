@@ -1,0 +1,130 @@
+.price {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	@include container;
+	@include Lato;
+
+
+	.price__title {
+		@include SubTitle;
+		margin-right: 30px;
+	}
+
+	.price__btn {
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		border: 2px solid transparent;
+		background-color: #E6EBF5;
+		margin-bottom: 20px;
+		transform: rotate(-180deg);
+		transition: transform .3s ease-out, background-color .3s ease-out;
+
+		&:hover {
+			background-color: #7BC8D9;
+		}
+
+		&:focus {
+			border: 2px solid black;
+		}
+
+		@media (max-width: 1100px) {
+			width: 50px;
+			height: 50px;
+		}
+	}
+
+
+
+	.price__btn--rotate {
+		transform: rotate(0deg);
+
+	}
+}
+
+.hide::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+}
+
+.price__content {
+	@include Lato;
+	@include boxShadow;
+	width: 100%;
+	overflow: hidden;
+	transition: max-height .3s ease-out;
+	max-height: 3000px;
+
+	@media (max-width:992px) {
+		overflow-x: auto;
+	}
+
+
+	&.hide {
+		position: relative;
+		max-height: 233px;
+
+		@media (max-width:992px) {
+			overflow-x: hidden;
+		}
+	}
+
+
+	.price__table {
+		width: 100%;
+		padding: 40px 30px 0 30px;
+		min-width: 966px;
+
+
+
+		.price__head {
+			.price__head-tr {
+
+
+				.price__head-th {
+					padding-bottom: 46px;
+					text-align: start;
+					font-weight: 500;
+					font-size: 18px;
+					line-height: 22px;
+					color: #8D8D8D;
+
+				}
+			}
+		}
+
+		.price__body {
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 24px;
+
+			.price__body-tr {
+				.price__body-td {
+					padding-bottom: 49px;
+					padding-right: 17px;
+				}
+			}
+		}
+	}
+}
+
+.simplebar-track.simplebar-horizontal {
+	left: 0;
+	height: 11px;
+	background-color: #5C51FF;
+}
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+	background-color: #ED4D7E;
+	border-radius: 15px;
+}
+
+.simplebar-scrollbar:before {
+	background: #b4345b;
+}
