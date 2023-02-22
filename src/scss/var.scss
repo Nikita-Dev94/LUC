@@ -16,6 +16,7 @@
 	@media (max-width: 992px) {
 		padding-left: 18px;
 		padding-right: 18px;
+
 	}
 
 	@media (max-width: 600px) {
@@ -52,15 +53,14 @@
 	color: #5C51FF;
 	background-color: #E7EBFC;
 	border: 2px solid transparent;
-	transition: background-color .3s ease, border .3s ease;
+	transition: background-color .3s ease, color .3s ease;
 
 	&:hover {
 		background-color: #7BC8D9;
+		color: #fff;
 	}
 
-	&:focus {
-		border: 2px solid black;
-	}
+
 }
 
 @mixin boxShadow {
@@ -78,15 +78,14 @@
 	font-size: 24px;
 	line-height: 132%;
 	border: 2px solid transparent;
-	transition: background-color .3s ease;
+	transition: background-color .3s ease, color .3s ease;
 
 	&:hover {
 		background-color: #7BC8D9;
+		color: #fff;
 	}
 
-	&:focus {
-		border: 2px solid black;
-	}
+
 }
 
 @mixin SubTitle {

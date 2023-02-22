@@ -12,7 +12,7 @@ footer {
 	.footer__logo-765 {
 		display: none;
 		position: absolute;
-		top: 60px;
+		top: 82px;
 		left: 12px;
 
 		@media (max-width: 765px) {
@@ -37,7 +37,7 @@ footer {
 		@media (max-width: 765px) {
 			font-size: 12px;
 			line-height: 14px;
-			padding: 140px 0 24px 0;
+			padding: 173px 0 12px 0;
 
 			img {
 				display: none;
@@ -62,9 +62,13 @@ footer {
 
 		@media (max-width:1160px) {
 			text-align: start;
-			width: 72%;
+			width: 100%;
 			padding-top: 35px;
 			padding-bottom: 70px;
+		}
+
+		@media (max-width: 765px) {
+			padding-top: 20px;
 		}
 
 		.footer__tel {

@@ -2,9 +2,12 @@
 	@include container;
 	@include Lato;
 
+	@media (max-width: 992px) {
+		margin-bottom: 50px;
+	}
+
 	@media (max-width: 765px) {
 		margin-bottom: 28px;
-
 	}
 }
 

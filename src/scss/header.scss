@@ -37,7 +37,7 @@ header {
 		margin-right: 30px;
 	}
 
-	@media (max-width: 750px) {
+	@media (max-width: 992px) {
 		margin-right: 0;
 	}
 
@@ -67,7 +67,7 @@ header {
 
 .raiting {
 	position: relative;
-	margin-right: 104.5px;
+	margin-right: 99px;
 
 	@media (max-width: 1435px) {
 		margin-right: 0px;
@@ -203,9 +203,7 @@ header {
 			transition: border .3s ease-in;
 		}
 
-		&:focus::after {
-			border: 2px solid black;
-		}
+
 
 
 	}
@@ -234,9 +232,7 @@ header {
 			color: #7BC8D9;
 		}
 
-		&:focus {
-			border: 2px solid black;
-		}
+
 	}
 
 	.header__worktime {
@@ -261,6 +257,13 @@ header {
 .header__btn-xs {
 	display: none;
 	@include btnBlue;
+
+	&:hover {
+		svg path {
+			transition: fill .3s ease;
+			fill: #fff;
+		}
+	}
 
 	@media (max-width: 750px) {
 		display: inline-block;

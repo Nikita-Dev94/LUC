@@ -2,7 +2,15 @@
 	@include Lato;
 	@include container;
 	position: relative;
-	margin-bottom: 75px;
+	margin-bottom: 60px;
+
+	@media (max-width:992px) {
+		margin-bottom: 30px;
+	}
+
+	@media (max-width:765px) {
+		margin-bottom: 16px;
+	}
 
 	.slider__item {
 		@include boxShadow;
@@ -112,6 +120,10 @@
 	width: 67%;
 	margin-bottom: 47px;
 
+	@media (max-width:765px) {
+		margin-bottom: 30px;
+	}
+
 	@media (max-width: 992px) {
 		padding-left: 0;
 		width: 100%;
@@ -163,9 +175,7 @@
 		background-color: #7BC8D9;
 	}
 
-	&:focus {
-		border: 2px solid black;
-	}
+
 }
 
 .staff__wrapper {
@@ -205,6 +215,7 @@
 
 	&:hover {
 		background-color: #7BC8D9;
+
 	}
 
 

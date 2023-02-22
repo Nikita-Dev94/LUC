@@ -23,12 +23,16 @@
 
 .contact__route-link {
 	position: absolute;
-	top: -5px;
+	top: 5px;
 	right: 0;
 	@include btnBlue;
 	color: #5C51FF;
 	padding-left: 17px;
 	padding-right: 17px;
+
+	&:visited {
+		color: #5C51FF;
+	}
 
 	@media (max-width: 1435px) {
 		right: 18px;
@@ -36,6 +40,7 @@
 
 	@media (max-width: 992px) {
 		right: 18px;
+		top: -5px;
 	}
 
 	@media (max-width: 600px) {
@@ -127,9 +132,7 @@
 						color: #7BC8D9;
 					}
 
-					&:focus {
-						border: 2px solid black;
-					}
+
 				}
 
 				@media (max-width:765px) {

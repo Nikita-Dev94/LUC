@@ -2,6 +2,13 @@
 	@include Lato;
 	@include container;
 
+	@media (max-width:992px) {
+		margin-bottom: 45px;
+	}
+
+	@media (max-width:765px) {
+		margin-bottom: 30px;
+	}
 }
 
 .ceo__content {
